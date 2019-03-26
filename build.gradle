@@ -1,0 +1,24 @@
+plugins {
+    id "com.github.lkishalmi.gatling" version "0.4.1"
+}
+repositories {
+    mavenCentral()
+}
+apply plugin: 'scala'
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.8'
+}
+
+dependencies {
+    // Use Scala 2.11 in our library project
+    compile 'org.scala-lang:scala-library:2.11.12'
+
+    // Use Scalatest for testing our library
+    testCompile 'org.scalatest:scalatest_2.11:3.0.5'
+
+    testCompile group: 'io.gatling.highcharts', name: 'gatling-charts-highcharts', version: '3.0.3'
+
+    // Need scala-xml at test runtime
+    testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.1.0'
+}

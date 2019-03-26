@@ -1,0 +1,3 @@
+rootProject.name = 'gratling-gradle-poc'
+include 'gatling-gradle'
+
